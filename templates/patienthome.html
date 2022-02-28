@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Home</title>
+    
+    <style>
+    h2{
+	text-align:center;
+	color:heartpink;
+	font-family:Arial,serif,cooper;
+	font-weight:bolder;
+	text-decoration-color:turquoise;
+	}
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 2px;
+  overflow: hidden;
+  background-color:darkgoldenrod;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: lightblue;
+}  
+    </style>
+</head>
+<body bgcolor="lightblue">
+<center>
+ <h3> Patient Home </h3>
+ 
+ <ul>
+   <li> <a th:href="@{/patient/myprofile/{id}(id=${patient.id})}">Profile</a>  </li>
+  <li> <a th:href="@{/patient/{id}/appointment(id=${patient.id})}">Book Appointment</a> </li>
+ <li>  <a th:href="@{/patient/{id}/myappointments(id=${patient.id})}">My Appointments</a> </li>
+  <li>  <a th:href="@{/}">Logout</a>
+  <li>
+</center>
+</body>
+</html>

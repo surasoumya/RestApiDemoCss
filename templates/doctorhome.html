@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor home</title>
+    
+    
+   <style>
+    div {
+  border-radius: 5px;
+  background-color:olive;
+  padding: 20px;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+button{
+
+padding:3px;
+margin:3px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 2px;
+  overflow: hidden;
+  background-color:darkgoldenrod;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: lightblue;
+}  
+    </style>
+</head>
+<body bgcolor="lightyellow">
+<h2>Doctor Home</h2>
+<center>
+<ul>
+    <li><a th:href="@{/doctor/myprofile/{id}(id=${doctor.id})}">Profile</a></li>
+    <li><a th:href="@{/doctor/myappointments/{id}(id=${doctor.id})}">My appointments</a></li>
+   <li> <a th:href="@{/}">Logout</a>
+   </li>
+</center>
+</body>
+</html>
